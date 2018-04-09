@@ -4,7 +4,7 @@
 #
 Name     : R-argparse
 Version  : 1.1.1
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/argparse_1.1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/argparse_1.1.1.tar.gz
 Summary  : Command Line Optional and Positional Argument Parser
@@ -15,13 +15,13 @@ Requires: R-findpython
 Requires: R-getopt
 Requires: R-jsonlite
 Requires: R-proto
-Requires: R-reticulate
+Requires: R-stringi
 BuildRequires : R-evaluate
 BuildRequires : R-findpython
 BuildRequires : R-getopt
 BuildRequires : R-jsonlite
 BuildRequires : R-proto
-BuildRequires : R-reticulate
+BuildRequires : R-stringi
 BuildRequires : clr-R-helpers
 
 %description
@@ -36,11 +36,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521225626
+export SOURCE_DATE_EPOCH=1523288328
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521225626
+export SOURCE_DATE_EPOCH=1523288328
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

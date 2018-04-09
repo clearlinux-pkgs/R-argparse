@@ -1,1 +1,5 @@
 # This file contains recursive sources that require this package
+R-NMF
+R-doRNG
+R-pkgmaker
+R-rngtools
