@@ -4,16 +4,16 @@
 #
 Name     : R-argparse
 Version  : 2.0.1
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/argparse_2.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/argparse_2.0.1.tar.gz
 Summary  : Command Line Optional and Positional Argument Parser
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+ Python-2.0
-Requires: R-findpython
-Requires: R-jsonlite
 BuildRequires : R-findpython
+BuildRequires : R-getopt
 BuildRequires : R-jsonlite
+BuildRequires : R-rlang
 BuildRequires : buildreq-R
 
 %description
@@ -28,10 +28,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552183432
+export SOURCE_DATE_EPOCH=1552711646
 
 %install
-export SOURCE_DATE_EPOCH=1552183432
+export SOURCE_DATE_EPOCH=1552711646
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -67,8 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library argparse|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  argparse || :
 
 
 %files
@@ -101,3 +100,9 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/argparse/help/paths.rds
 /usr/lib64/R/library/argparse/html/00Index.html
 /usr/lib64/R/library/argparse/html/R.css
+/usr/lib64/R/library/argparse/tests/run-all.R
+/usr/lib64/R/library/argparse/tests/test_help.R
+/usr/lib64/R/library/argparse/tests/test_help.Rout.save
+/usr/lib64/R/library/argparse/tests/test_version.R
+/usr/lib64/R/library/argparse/tests/test_version.Rout.save
+/usr/lib64/R/library/argparse/tests/testthat/test-argparse.R
