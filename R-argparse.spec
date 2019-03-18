@@ -4,7 +4,7 @@
 #
 Name     : R-argparse
 Version  : 2.0.1
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/argparse_2.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/argparse_2.0.1.tar.gz
 Summary  : Command Line Optional and Positional Argument Parser
