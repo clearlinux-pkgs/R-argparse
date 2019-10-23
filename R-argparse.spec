@@ -4,7 +4,7 @@
 #
 Name     : R-argparse
 Version  : 2.0.1
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/argparse_2.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/argparse_2.0.1.tar.gz
 Summary  : Command Line Optional and Positional Argument Parser
@@ -17,10 +17,11 @@ BuildRequires : R-R6
 BuildRequires : R-findpython
 BuildRequires : R-jsonlite
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-be used with Rscript to write "#!" shebang scripts that gracefully
-    accept positional and optional arguments and automatically generate usage.
+argparse: Command line optional and positional argument parser
+==============================================================
 
 %prep
 %setup -q -c -n argparse
@@ -30,10 +31,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569284470
+export SOURCE_DATE_EPOCH=1571796285
 
 %install
-export SOURCE_DATE_EPOCH=1569284470
+export SOURCE_DATE_EPOCH=1571796285
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
