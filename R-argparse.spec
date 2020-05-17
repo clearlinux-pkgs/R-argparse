@@ -4,7 +4,7 @@
 #
 Name     : R-argparse
 Version  : 2.0.1
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/argparse_2.0.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/argparse_2.0.1.tar.gz
 Summary  : Command Line Optional and Positional Argument Parser
@@ -17,29 +17,29 @@ BuildRequires : R-R6
 BuildRequires : R-findpython
 BuildRequires : R-jsonlite
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-argparse: Command line optional and positional argument parser
-==============================================================
+be used with Rscript to write "#!" shebang scripts that gracefully
+    accept positional and optional arguments and automatically generate usage.
 
 %prep
 %setup -q -c -n argparse
+cd %{_builddir}/argparse
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571796285
+export SOURCE_DATE_EPOCH=1589757960
 
 %install
-export SOURCE_DATE_EPOCH=1571796285
+export SOURCE_DATE_EPOCH=1589757960
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
