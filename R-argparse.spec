@@ -4,7 +4,7 @@
 #
 Name     : R-argparse
 Version  : 2.2.2
-Release  : 57
+Release  : 58
 URL      : https://cran.r-project.org/src/contrib/argparse_2.2.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/argparse_2.2.2.tar.gz
 Summary  : Command Line Optional and Positional Argument Parser
@@ -18,9 +18,6 @@ BuildRequires : R-R6
 BuildRequires : R-findpython
 BuildRequires : R-jsonlite
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 be used with 'Rscript' to write "#!" shebang scripts that gracefully
@@ -43,10 +40,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676566178
+export SOURCE_DATE_EPOCH=1678810904
 
 %install
-export SOURCE_DATE_EPOCH=1676566178
+export SOURCE_DATE_EPOCH=1678810904
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-argparse
 cp %{_builddir}/argparse/COPYING %{buildroot}/usr/share/package-licenses/R-argparse/b47456e2c1f38c40346ff00db976a2badf36b5e3 || :
