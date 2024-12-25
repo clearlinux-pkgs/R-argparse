@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : R-argparse
-Version  : 2.2.4
-Release  : 66
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/argparse_2.2.4.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/argparse_2.2.4.tar.gz
+Version  : 2.2.5
+Release  : 67
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/argparse_2.2.5.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/argparse_2.2.5.tar.gz
 Summary  : Command Line Optional and Positional Argument Parser
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
@@ -48,10 +48,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1732140990
+export SOURCE_DATE_EPOCH=1735105011
 
 %install
-export SOURCE_DATE_EPOCH=1732140990
+export SOURCE_DATE_EPOCH=1735105011
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-argparse
 cp %{_builddir}/argparse/COPYING %{buildroot}/usr/share/package-licenses/R-argparse/b47456e2c1f38c40346ff00db976a2badf36b5e3 || :
